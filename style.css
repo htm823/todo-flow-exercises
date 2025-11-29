@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+:root {
+	/* Primary (Blue-Gray) */
+	--color-primary-100: #E8EEF2;
+	--color-primary-300: #A6BCC9;
+	--color-primary-500: #415E72;
+	--color-primary-700: #2E4554;
+	--color-primary-900: #16212A;
+
+	/* Gray (Cool Neutral) */
+	--color-gray-100: #F7F9FA;
+	--color-gray-300: #E1E5E8;
+	--color-gray-500: #9DA3AA;
+	--color-gray-700: #4E545C;
+	--color-gray-900: #1F2327;
+
+	/* White */
+	--color-white: #FFF;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	background-color: var(--color-gray-100);
+	font-size: 1.8rem;
+	font-family: "Tinos", sans-serif;
+	color: var(--color-gray-900);
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.header {
+	background-color: var(--color-primary-500);
+	color: var(--color-white);
+	padding: 2rem 0;
+}
+
+.header__container,
+.main__container,
+.footer__container {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.main {
+	padding: 5rem 0;
+}
+
+.main__container {
+	display: flex;
+	gap: 2rem;
+}
+
+.task-board,
+.add-task {
+	flex: 1;
+	padding: 2rem 3rem;
+}
+
+.task-board {
+	background-color: var(--color-primary-100);
+	color: var(--color-primary-900);
+}
+
+.task-board__title,
+.add-task__title {
+	font-size: 2.8rem;
+	margin-bottom: 2rem;
+	font-family: "Merriweather";
+	font-weight: 700;
+}
+
+.task-board__list {
+	list-style: none;
+	padding: 0;
+}
+
+.add-task__input-group {
+	display: flex;
+	gap: 1rem;
+	margin-top: 2rem;
+}
+
+.add-task__input {
+	flex: 1;
+	border: 1px solid var(--color-primary-500);
+	border-radius: 0.3rem;
+	padding: 0.7rem 1rem;
+	font-size: 1.8rem;
+	font-family: "Tinos";
+}
+
+.add-task__button {
+	background-color: var(--color-primary-500);
+	color: var(--color-white);
+	border: 1px solid var(--color-primary-500);
+	border-radius: 0.3rem;
+	padding: 0.7rem 1rem;
+	font-size: 1.8rem;
+	cursor: pointer;
+	font-family: "Tinos";
+}
+
+.footer {
+	background-color: var(--color-primary-500);
+}
+
+.footer__copyright {
+	color: var(--color-white);
+	text-align: center;
+	padding: 1.5rem 0;
+	display: block;
+}
