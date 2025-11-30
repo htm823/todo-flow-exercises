@@ -40,6 +40,9 @@ function renderTask(task) {
 		saveTasks();
 	});
 
+	const customCheckbox     = document.createElement('span');
+	customCheckbox.className = 'task-board__custom-checkbox';
+
 	const span       = document.createElement('span');
 	span.className   = 'task-board__text';
 	span.textContent = task.text;
@@ -59,6 +62,7 @@ function renderTask(task) {
 	checklistItem.className = 'task-board__checklist-item';
 
 	checklistItem.appendChild(checkbox);
+	checklistItem.appendChild(customCheckbox);
 	checklistItem.appendChild(span);
 
 	li.appendChild(checklistItem);
