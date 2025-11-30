@@ -3,7 +3,8 @@ A simple to-do list application built with HTML, CSS, and JavaScript.
 This project focuses on clean UI, smooth interaction, and a clear user experience.
 
 ## 📸 Preview
-*(Optional: add a screenshot or GIF here)*
+![todo-list](https://github.com/user-attachments/assets/334e4b6b-1cd2-48e4-8db9-b21aef2bdba3)
+
 
 ## ✨ Features
 - Add tasks
@@ -24,6 +25,5 @@ This project focuses on clean UI, smooth interaction, and a clear user experienc
    git clone https://github.com/yourname/yourrepo.git
    ```
    
-2. Open index.html in your browser.
-   No build tools or dependencies needed.
+2. Open index.html in your browser. No build tools or dependencies needed.
 
