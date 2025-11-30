@@ -27,3 +27,7 @@ This project focuses on clean UI, smooth interaction, and a clear user experienc
    
 2. Open index.html in your browser. No build tools or dependencies needed.
 
+## 🔮 Future Updates
+
+- Responsive design improvements
+- Further UI refinement, including button styling
