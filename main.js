@@ -4,6 +4,7 @@
 const taskInput = document.getElementById('task-input');
 const addBtn = document.getElementById('add-btn');
 const taskList = document.getElementById('task-list');
+const clearBtn = document.getElementById('clear-btn');
 
 // Task Array
 let tasks = [];
@@ -92,3 +93,15 @@ addBtn.addEventListener('click', () => {
 
 // Load tasks from localStorage on page load
 window.addEventListener('DOMContentLoaded', loadTasks);
+
+// Clear all tasks
+clearBtn.addEventListener('click', () => {
+	if (!confirm('Are you sure you want to clear all tasks?')) {
+		return;
+	}
+
+	tasks = [];
+	saveTasks();
+
+	taskList.innerHTML = '';
+});
