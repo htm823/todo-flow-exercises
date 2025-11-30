@@ -20,6 +20,10 @@ html {
 	--gray-700: #4E545C;
 	--gray-900: #1F2327;
 
+	/* Danger */
+	--danger-delete: #EF85A0;
+    --danger-clear: #E34F7A;
+
 	/* Font families */
 	--font-body: 'Tinos', sans-serif;
 	--font-heading: 'Merriweather', sans-serif;
@@ -86,6 +90,24 @@ body {
 	border-radius: var(--radius-1);
 }
 
+.task-board__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.task-board__clear-button {
+	background-color: var(--danger-clear);
+	color: var(--gray-000);
+	display: block;
+	border: none;
+	border-radius: var(--radius-1);
+	padding: var(--space-1) var(--space-2);
+	font-size: var(--fs-p);
+	font-family: var(--font-body);
+	cursor: pointer;
+}
+
 .task-board__title,
 .add-task__title {
 	font-size: var(--fs-h2);
@@ -142,7 +164,7 @@ body {
 }
 
 .task-board__delete-btn {
-	background-color: var(--primary-300);
+	background-color: var(--danger-delete);
 	color: var(--gray-000);
 	border: none;
 	border-radius: var(--radius-1);
@@ -150,6 +172,11 @@ body {
 	font-size: var(--fs-p);
 	font-family: var(--font-body);
 	cursor: pointer;
+}
+
+.task-board__delete-btn:active {
+  transform: translateY(3px);
+  box-shadow: none;
 }
 
 .task-board__checklist-item {
@@ -183,7 +210,7 @@ body {
 	border: 1px solid var(--primary-500);
 }
 
-.task-board__checkbox:checked + .task-board__custom-checkbox::before {
+.task-board__checkbox:checked+.task-board__custom-checkbox::before {
 	content: '\F272';
 	font-family: 'bootstrap-icons';
 	font-size: 1.8rem;
@@ -196,7 +223,7 @@ body {
 	color: var(--gray-000);
 }
 
-.task-board__checkbox:checked ~ .task-board__text {
+.task-board__checkbox:checked~.task-board__text {
 	text-decoration-line: line-through;
 	color: var(--gray-500);
 }
