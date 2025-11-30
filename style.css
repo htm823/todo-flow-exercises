@@ -21,8 +21,8 @@ html {
 	--gray-900: #1F2327;
 
 	/* Danger */
-	--danger-delete: #EF85A0;
-    --danger-clear: #E34F7A;
+	--danger-delete: #e9a0ac;
+    --danger-clear: #dc7385;
 
 	/* Font families */
 	--font-body: 'Tinos', sans-serif;
