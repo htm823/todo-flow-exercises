@@ -114,6 +114,10 @@ body {
 	cursor: pointer;
 }
 
+.task-board__clear-button.no-task {
+	display: none
+}
+
 .task-board__title,
 .add-task__title {
 	font-size: var(--fs-h2);
@@ -236,6 +240,9 @@ body {
 
 .footer {
 	background-color: var(--primary-500);
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
 
 .footer__copyright {

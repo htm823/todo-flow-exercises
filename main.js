@@ -2,9 +2,9 @@
 
 // DOM Elements
 const taskInput = document.getElementById('task-input');
-const addBtn = document.getElementById('add-btn');
-const taskList = document.getElementById('task-list');
-const clearBtn = document.getElementById('clear-btn');
+const addBtn    = document.getElementById('add-btn');
+const taskList  = document.getElementById('task-list');
+const clearBtn  = document.getElementById('clear-btn');
 
 // Task Array
 let tasks = [];
@@ -24,6 +24,8 @@ function loadTasks() {
 
 	tasks = JSON.parse(saved);
 	tasks.forEach((task) => renderTask(task));
+
+	updateClearButton()
 }
 
 // Function to render a task in the DOM
@@ -57,6 +59,7 @@ function renderTask(task) {
 		li.remove();
 		tasks = tasks.filter((t) => t !== task);
 		saveTasks();
+		updateClearButton()
 	});
 
 	const checklistItem     = document.createElement('label');
@@ -70,6 +73,15 @@ function renderTask(task) {
 	li.appendChild(deleteBtn);
 
 	taskList.appendChild(li);
+}
+
+// Function to update clear button visibility
+function updateClearButton() {
+	if (tasks.length === 0) {
+		clearBtn.classList.add('no-task');
+	} else {
+		clearBtn.classList.remove('no-task');
+	}
 }
 
 // Add a new task
@@ -88,6 +100,8 @@ addBtn.addEventListener('click', () => {
 
 	renderTask(newTask);
 
+	updateClearButton()
+
 	taskInput.value = '';
 });
 
@@ -104,4 +118,6 @@ clearBtn.addEventListener('click', () => {
 	saveTasks();
 
 	taskList.innerHTML = '';
+
+	updateClearButton()
 });
