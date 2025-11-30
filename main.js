@@ -55,8 +55,13 @@ function renderTask(task) {
 		saveTasks();
 	});
 
-	li.appendChild(checkbox);
-	li.appendChild(span);
+	const checklistItem     = document.createElement('label');
+	checklistItem.className = 'task-board__checklist-item';
+
+	checklistItem.appendChild(checkbox);
+	checklistItem.appendChild(span);
+
+	li.appendChild(checklistItem);
 	li.appendChild(deleteBtn);
 
 	taskList.appendChild(li);
